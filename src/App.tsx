@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Dropdown from './components/Dropdown';
 import LineChart from './LineChart';
 import { useCommodityModel } from './models/CommodityModel';
 
@@ -49,6 +50,16 @@ const App: React.FC = function () {
         >
           <LineChart className="h-80"></LineChart>
         </div>
+
+        <Dropdown
+          options={[
+            { label: '字节跳动', value: 'bytedance' },
+            { label: '三维六度', value: 'swjt' },
+          ]}
+        >
+          选择
+        </Dropdown>
+        <div>其他内容</div>
       </div>
     </div>
   );
