@@ -63,7 +63,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "format": "prettier --write --loglevel=debug src ",
+    "lint": "eslint --fix -c .eslintrc.js src/**/*.tsx"
   },
   "eslintConfig": {
     "extends": [
