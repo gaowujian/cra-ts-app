@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import LineChart from './LineChart';
+import { useCommodityModel } from './models/CommodityModel';
 
 const list = [
   { name: 'tony', age: 18 },
@@ -9,8 +10,10 @@ const list = [
 ];
 
 const App: React.FC = function () {
+  const { state, add, minus } = useCommodityModel();
+
   return (
-    <div className="h-screen w-screen bg-white flex flex-col">
+    <div className="h-screen w-screen bg-white flex flex-col select-none">
       <div className="text-center text-lg font-bold p-4">Title</div>
       <div className="flex-1 bg-blue-200 px-4 py-2">
         <ul>
@@ -23,6 +26,23 @@ const App: React.FC = function () {
             );
           })}
         </ul>
+        <div className="p-4 rounded w-40  flex justify-between flex-wrap bg-rose-300">
+          <span className="w-full inline-block font-bold mb-2">
+            {state.count}
+          </span>
+          <button
+            onClick={add}
+            className="px-2 py-1 bg-white transition-all hover:shadow"
+          >
+            ++
+          </button>
+          <button
+            onClick={minus}
+            className="px-2 py-1 bg-white transition-all hover:shadow"
+          >
+            --
+          </button>
+        </div>
         <div
           className="border border-red-50 rounded-lg mt-4 overflow-hidden p-2 bg-blue-500"
           style={{ backgroundSize: '' }}
