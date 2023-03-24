@@ -47,6 +47,7 @@ specifiers:
   postcss-loader: ^6.2.1
   postcss-normalize: ^10.0.1
   postcss-preset-env: ^7.0.1
+  prettier: ^2.8.6
   prompts: ^2.4.2
   react: ^18.2.0
   react-app-polyfill: ^3.0.0
@@ -133,9 +134,10 @@ devDependencies:
   eslint-config-standard-with-typescript: 34.0.1_kpp2vut26cd5tks56ofaqvkliu
   eslint-plugin-import: 2.27.5_eslint@8.36.0
   eslint-plugin-n: 15.6.1_eslint@8.36.0
-  eslint-plugin-prettier: 4.2.1_4zq63nz6e4ttpwysb2ij6p5kku
+  eslint-plugin-prettier: 4.2.1_ose2zoovovx4ulolhifz3tfzx4
   eslint-plugin-promise: 6.1.1_eslint@8.36.0
   eslint-plugin-react: 7.32.2_eslint@8.36.0
+  prettier: 2.8.6
   typescript: 4.9.5
 
 packages:
@@ -4821,7 +4823,7 @@ packages:
       semver: 7.3.8
     dev: true
 
-  /eslint-plugin-prettier/4.2.1_4zq63nz6e4ttpwysb2ij6p5kku:
+  /eslint-plugin-prettier/4.2.1_ose2zoovovx4ulolhifz3tfzx4:
     resolution: {integrity: sha512-f/0rXLXUt0oFYs8ra4w49wYZBG5GKZpAYsJSm6rnYL5uVDjd+zowwMwVZHnAjf4edNrKpCDYfXDgmRE/Ak7QyQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -4834,6 +4836,7 @@ packages:
     dependencies:
       eslint: 8.36.0
       eslint-config-prettier: 8.8.0_eslint@8.36.0
+      prettier: 2.8.6
       prettier-linter-helpers: 1.0.0
     dev: true
 
@@ -8194,6 +8197,12 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       fast-diff: 1.2.0
+    dev: true
+
+  /prettier/2.8.6:
+    resolution: {integrity: sha512-mtuzdiBbHwPEgl7NxWlqOkithPyp4VN93V7VeHVWBF+ad3I5avc0RVDT4oImXQy9H/AqxA2NSQH8pSxHW6FYbQ==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /pretty-bytes/5.6.0:

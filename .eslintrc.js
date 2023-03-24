@@ -10,6 +10,8 @@ module.exports = {
     sourceType: "module",
     project: ["./tsconfig.json"],
   },
-  plugins: ["react"],
-  rules: {},
+  plugins: ["react","prettier"],
+  rules: {
+    "prettier/prettier": "error"
+  },
 };
