@@ -1,4 +1,6 @@
-import React, { useEffect } from 'react';
+import AppSelector from '@components/AppSelector';
+import { Card, Select } from 'antd';
+import React, { useState } from 'react';
 import './App.css';
 import Dropdown from './components/Dropdown';
 import LineChart from './LineChart';
@@ -10,13 +12,15 @@ const list: any[] = [
   { name: 'anna', age: 25 },
 ];
 
+const appSelectOptions = [
+  { label: 'wujian', value: 'wujian' },
+  { label: 'trina', value: 'tria' },
+];
+
 const App = function () {
   const { state, add, minus } = useCommodityModel();
 
-  useEffect(() => {
-    list.push({ name: 'monkey', age: 25 });
-  }, []);
-
+  const [selectedApp, setSelectedApp] = useState('');
   return (
     <div className="h-screen w-screen bg-white flex flex-col select-none">
       <div className="text-center text-lg font-bold p-4">Title</div>
@@ -63,7 +67,26 @@ const App = function () {
         >
           选择
         </Dropdown>
-        <div>其他内容</div>
+
+        <Card>
+          <div className="text-center"> {selectedApp}</div>
+          <div className="mb-2">
+            <AppSelector
+              onChange={setSelectedApp}
+              options={appSelectOptions}
+              className="w-28"
+            ></AppSelector>
+          </div>
+
+          <div>
+            <Select
+              options={appSelectOptions}
+              onChange={setSelectedApp}
+              defaultValue={appSelectOptions[0]?.value}
+              className="w-28"
+            ></Select>
+          </div>
+        </Card>
       </div>
     </div>
   );
