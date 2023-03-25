@@ -7,6 +7,7 @@ import CommodityModel from './models/CommodityModel';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
     <CommodityModel initialState={{ name: 'wujian' }}>

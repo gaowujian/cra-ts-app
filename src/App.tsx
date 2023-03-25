@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Dropdown from './components/Dropdown';
 import LineChart from './LineChart';
 import { useCommodityModel } from './models/CommodityModel';
 
-const list = [
+const list: any[] = [
   { name: 'tony', age: 18 },
   { name: 'kelly', age: 29 },
   { name: 'anna', age: 25 },
 ];
 
-const App: React.FC = function () {
+const App = function () {
   const { state, add, minus } = useCommodityModel();
+
+  useEffect(() => {
+    list.push({ name: 'monkey', age: 25 });
+  }, []);
 
   return (
     <div className="h-screen w-screen bg-white flex flex-col select-none">
