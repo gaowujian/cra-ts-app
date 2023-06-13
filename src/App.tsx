@@ -5,6 +5,8 @@ import './App.css';
 import Dropdown from './components/Dropdown';
 import LineChart from './LineChart';
 import { useCommodityModel } from './models/CommodityModel';
+import { Button } from '@arco-design/web-react';
+// import '@arco-design/web-react/es/Button/style';
 
 const list: any[] = [
   { name: 'tony', age: 18 },
@@ -24,6 +26,9 @@ const App = function () {
   return (
     <div className="h-screen w-screen bg-white flex flex-col select-none">
       <div className="text-center text-lg font-bold p-4">Title</div>
+      <div>
+        <Button type="primary">11</Button>
+      </div>
       <div className="flex-1 bg-blue-200 px-4 py-2">
         <ul>
           {list.map((person, index) => {
